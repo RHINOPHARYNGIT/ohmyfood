@@ -182,12 +182,14 @@ header {
     color: white;
     background: $color-btn;
     opacity:(1);
+    box-shadow: 0px 1px 5px -1px $gray-strong;
     
     &:hover {
 
         opacity:(0.8);
+        box-shadow: 0px 1px 17px 1px $gray-strong;
     
-    transition: opacity 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
     
         
         
@@ -208,10 +210,14 @@ header {
             color: $gray-strong;
         }
         gap: 10px;
+        box-shadow:  0px 9px 20px -18px $gray-strong;
         &:hover{
             background-color: lighten($color: $color-primary, $amount: 30%);
+            box-shadow:  0px 9px 30px -10px $gray-strong;
+            transition: all 200ms ease-in-out;
             i{
                 color:$color-primary;
+                transition: color 200ms ease-in-out;
             }
     
         }
@@ -265,7 +271,10 @@ header {
         right: 20px;
         background-color: $color-tertiary;
         width: fit-content;
-        color: darken($color-tertiary,45%);
+        color: darken($color-tertiary,40%);
+        padding: 10px;
+        border-radius: 2px;
+        font-weight: bold;
     }
 }
 
@@ -356,7 +365,7 @@ header {
     }
 }
 
-.like-btn{
+/*.like-btn{
     position: relative;
     .fa-heart{
         position: absolute;
@@ -365,6 +374,8 @@ header {
     .fa-regular{
         &:hover + i{       
              font-size: inherit;
+             
+                                   
         }
        
     }   
@@ -372,10 +383,39 @@ header {
         color:$color-primary;
         z-index: 1000;
         font-size: 0px;
-        transition : font-size 0.3s linear;
+        transition : font-size 0.3s linear;    
+    }
+   
+}*/
+.like-btn{
+    position: relative;
+    
+    .fa-heart{
+        position: absolute;
+        right: 10px;
+        
+        
+        
+    }
+    .fa-regular{
+        &:hover + i{       
+             transform: scale(1);
+             transition : transform 0.5s ease-in;
+             transform-origin: bottom;
+             
+                                   
+        }
+       
+    }   
+    .fa-solid{
+        color: $color-primary;
+        z-index: 1000;
+        transform: scale(0);
+        
     }
    
 }
+
     
 @keyframes color-fade{
     0%{

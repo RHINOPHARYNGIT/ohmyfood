@@ -120,10 +120,12 @@ header i {
   color: white;
   background: linear-gradient(351deg, #9356DC 15%, #FF79DA 85%);
   opacity: 1;
+  box-shadow: 0px 1px 5px -1px #353535;
 }
 .btn:hover {
   opacity: 0.8;
-  transition: opacity 400ms ease-in-out;
+  box-shadow: 0px 1px 17px 1px #353535;
+  transition: all 400ms ease-in-out;
 }
 
 .concept {
@@ -138,15 +140,19 @@ header i {
   padding: 12px 10px;
   display: flex;
   gap: 10px;
+  box-shadow: 0px 9px 20px -18px #353535;
 }
 .concept__step i {
   color: #353535;
 }
 .concept__step:hover {
   background-color: #e4d5f6;
+  box-shadow: 0px 9px 30px -10px #353535;
+  transition: all 200ms ease-in-out;
 }
 .concept__step:hover i {
   color: #9356DC;
+  transition: color 200ms ease-in-out;
 }
 .concept__step span {
   text-align: center;
@@ -196,7 +202,10 @@ header i {
   right: 20px;
   background-color: #99E2D0;
   width: fit-content;
-  color: #217460;
+  color: #278870;
+  padding: 10px;
+  border-radius: 2px;
+  font-weight: bold;
 }
 
 .footer {
@@ -263,6 +272,28 @@ header i {
   justify-content: center;
 }
 
+/*.like-btn{
+    position: relative;
+    .fa-heart{
+        position: absolute;
+        right: 10px;
+    }
+    .fa-regular{
+        &:hover + i{       
+             font-size: inherit;
+
+
+        }
+
+    }   
+    .fa-solid{
+        color:$color-primary;
+        z-index: 1000;
+        font-size: 0px;
+        transition : font-size 0.3s linear;    
+    }
+
+}*/
 .like-btn {
   position: relative;
 }
@@ -271,13 +302,14 @@ header i {
   right: 10px;
 }
 .like-btn .fa-regular:hover + i {
-  font-size: inherit;
+  transform: scale(1);
+  transition: transform 0.5s ease-in;
+  transform-origin: bottom;
 }
 .like-btn .fa-solid {
   color: #9356DC;
   z-index: 1000;
-  font-size: 0px;
-  transition: font-size 0.3s linear;
+  transform: scale(0);
 }
 
 @keyframes color-fade {
