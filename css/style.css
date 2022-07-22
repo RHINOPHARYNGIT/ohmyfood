@@ -9,6 +9,7 @@
 body {
   font-family: "Roboto";
   position: relative;
+  background-color: #f6f6f6;
 }
 
 h1, h2, h3, p {
@@ -87,6 +88,7 @@ header {
   display: flex;
   justify-content: center;
   vertical-align: middle;
+  background-color: white;
   padding: 12px 10px;
 }
 header img {
@@ -106,6 +108,8 @@ header i {
 }
 .nav__location {
   background-color: #eaeaea;
+  padding: 10px;
+  box-shadow: inset 0px 8px 6px -7px #353535;
 }
 .nav .container {
   padding: 20px 0px;
@@ -220,6 +224,13 @@ header i {
 .footer__heading {
   font-family: "Shrikhand";
 }
+.footer__link {
+  display: flex;
+  gap: 3px;
+}
+.footer__link i {
+  width: 22px;
+}
 
 .restaurant-heading img {
   width: 100%;
@@ -234,10 +245,15 @@ header i {
   background-color: #f6f6f6;
 }
 .menu__head {
+  display: flex;
+  padding: 30px 10px 0px 15px;
   font-size: 31px;
+  justify-content: space-between;
+}
+.menu__head h1 {
   font-family: "Shrikhand";
   font-weight: 500;
-  padding: 30px 0px 0px 15px;
+  font-size: 31px;
 }
 .menu__course {
   font-size: 16px;
@@ -270,6 +286,8 @@ header i {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 30px;
+  margin-bottom: -40px;
 }
 
 /*.like-btn{
