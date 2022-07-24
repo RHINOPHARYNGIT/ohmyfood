@@ -1,0 +1,26 @@
+@media screen and  (min-width: 992px){
+    /*body{
+        background-color: blue;
+    }*/
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header,nav,footer{
+        width: 100%;
+    }
+    .nav{
+        &__location{
+            gap: 1%;
+        }
+    }
+    .concept,.index-main,footer{
+        width:60%;
+    }
+    .like-btn{
+        /*align-self: center;*/
+        font-size: 30px;
+    }
+    
+}

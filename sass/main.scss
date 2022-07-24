@@ -171,6 +171,9 @@ header {
         background-color: $gray_mild;
         padding: 10px;
         box-shadow: inset 0px 8px 6px -7px $gray-strong;
+        display: flex;
+        justify-content: center;
+        gap: 3%;
     }
     .container{
     padding: 20px 0px;
@@ -244,6 +247,10 @@ header {
 
 .index-main {
     background-color: $gray-light;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
     @include blocs-padding;
     .container{
         @include f-column;
@@ -406,6 +413,7 @@ header {
 .like-btn{
     position: relative;
     
+    
     .fa-heart{
         position: absolute;
         right: 10px;
@@ -416,7 +424,7 @@ header {
     .fa-regular{
         &:hover + i{       
              transform: scale(1);
-             transition : transform 0.5s ease-in;
+             transition : transform 1s ease-in;
              transform-origin: bottom;
              
                                    
@@ -551,3 +559,6 @@ header {
         
     }
 }
+
+@import 'tablet.scss';
+@import 'desktop.scss';
