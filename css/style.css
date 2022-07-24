@@ -244,6 +244,7 @@ header i {
 .restaurant-heading img {
   width: 100%;
   height: 30vh;
+  object-fit: cover;
 }
 
 .menu {
@@ -299,28 +300,6 @@ header i {
   margin-bottom: -40px;
 }
 
-/*.like-btn{
-    position: relative;
-    .fa-heart{
-        position: absolute;
-        right: 10px;
-    }
-    .fa-regular{
-        &:hover + i{       
-             font-size: inherit;
-
-
-        }
-
-    }   
-    .fa-solid{
-        color:$color-primary;
-        z-index: 1000;
-        font-size: 0px;
-        transition : font-size 0.3s linear;    
-    }
-
-}*/
 .like-btn {
   position: relative;
 }
@@ -339,20 +318,6 @@ header i {
   transform: scale(0);
 }
 
-@keyframes color-fade {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 0.3;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 .courses {
   animation: bars 500ms ease-in-out backwards;
   display: flex;
