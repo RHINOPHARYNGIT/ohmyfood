@@ -149,6 +149,7 @@ header {
     display: flex;
     justify-content: center;
     vertical-align: middle;
+    align-items: center;
     background-color: white;
     @include blocs-padding;
 
@@ -475,63 +476,55 @@ header {
     overflow: hidden;
     box-shadow: 0px 0px 6px -5px #353535;
     &__content{
-        padding: 15px 10px;
+        padding: 15px 0 15px 10px;
         text-overflow: ellipsis;
         overflow: hidden;
-        transition:transform 350ms ease-out 50ms
+        transition:transform 350ms ease-out 50ms;
+        width:80%;
     }
     &__price-check{
         display: flex;
         justify-content: space-between;
-        width:30%;
+        
+        width: 20%;
         transform: translateX(50%);
         transition: transform 350ms ease-out 50ms;
         span{
             transform: rotate(-360deg);
             transition: transform 500ms ease-in-out;
             color:white;
-            font-size: 20px;
-            
+            font-size: 20px;   
         }
     }
-    .price{
+    .price {
         align-self: flex-end;
         padding-bottom: 15px;
         font-weight: bold;
         text-align: center;
     }
-    
-    
     h3 {
         font-size: 18px;
         white-space: nowrap;
         text-overflow: ellipsis;
-        overflow: hidden;
-        width:340px
+        overflow: hidden;        
     }
     p {
         color:$gray-strong;
         white-space: nowrap;
         text-overflow: ellipsis;
-        overflow: hidden; 
-        width: 340px;
+        overflow: hidden;
+        font-size: 15px;    
     }
     &:hover > .courses__price-check{
         transform: translateX(0px);
-        
         span {
-            transform: rotate(0deg);
+        transform: rotate(0deg);
         }
     }
     &:hover > .courses__content {
-
-        h3,p {
-        width: 250px;
+        width:70%;
         transition: width 350ms ease-out 50ms;
-        }
-   
     }
-
 }
 
 .checkbox{
@@ -542,21 +535,17 @@ header {
     height: inherit;
     width: 50%;
     background-color: $color-tertiary;
-    
-
 }
 
 
 @keyframes bars {
     0% {
         transform: translateY(20px);
-        opacity: 0;
-        
+        opacity: 0;    
     }
     100% {
         transform: translateY(0px);
-        opacity: 1;
-        
+        opacity: 1;   
     }
 }
 

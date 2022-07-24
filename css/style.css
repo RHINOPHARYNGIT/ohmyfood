@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.ttf") format("truetype");
@@ -88,6 +89,7 @@ header {
   display: flex;
   justify-content: center;
   vertical-align: middle;
+  align-items: center;
   background-color: white;
   padding: 12px 10px;
 }
@@ -372,15 +374,16 @@ header i {
   animation-delay: 1000ms;
 }
 .courses__content {
-  padding: 15px 10px;
+  padding: 15px 0 15px 10px;
   text-overflow: ellipsis;
   overflow: hidden;
   transition: transform 350ms ease-out 50ms;
+  width: 80%;
 }
 .courses__price-check {
   display: flex;
   justify-content: space-between;
-  width: 30%;
+  width: 20%;
   transform: translateX(50%);
   transition: transform 350ms ease-out 50ms;
 }
@@ -401,14 +404,13 @@ header i {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  width: 340px;
 }
 .courses p {
   color: #353535;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  width: 340px;
+  font-size: 15px;
 }
 .courses:hover > .courses__price-check {
   transform: translateX(0px);
@@ -416,8 +418,8 @@ header i {
 .courses:hover > .courses__price-check span {
   transform: rotate(0deg);
 }
-.courses:hover > .courses__content h3, .courses:hover > .courses__content p {
-  width: 250px;
+.courses:hover > .courses__content {
+  width: 70%;
   transition: width 350ms ease-out 50ms;
 }
 
@@ -441,15 +443,13 @@ header i {
     opacity: 1;
   }
 }
-@media screen and (min-width: 776px) {
-  /*body{
-      background-color: red;
-  }*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .like-btn {
+    align-self: baseline;
+    font-size: 30px;
+  }
 }
 @media screen and (min-width: 992px) {
-  /*body{
-      background-color: blue;
-  }*/
   body {
     display: flex;
     flex-direction: column;
@@ -458,14 +458,52 @@ header i {
   header, nav, footer {
     width: 100%;
   }
+  header i {
+    font-size: 50px;
+  }
   .nav__location {
     gap: 1%;
   }
-  .concept, .index-main, footer {
+  .concept, .index-main {
     width: 60%;
   }
   .like-btn {
     /*align-self: center;*/
     font-size: 30px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer__heading {
+    padding-left: 20px;
+  }
+  .footer a:last-of-type {
+    padding-right: 10px;
+  }
+  /*début du style propre aux pages de restaurant, pas de style relatif à l'index.html après ce repère*/
+  .restaurant-heading {
+    width: 100%;
+  }
+  .restaurant-heading img {
+    object-fit: cover;
+  }
+  .menu {
+    background-color: unset;
+  }
+  .menu__head {
+    width: 32%;
+    background: #99E2D0;
+    opacity: 0.7;
+    padding: 30px 10px 4px 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .menu__container {
+    display: flex;
+  }
+  .menu__course {
+    width: 33%;
   }
 }

@@ -1,6 +1,6 @@
-@media screen and  (min-width: 776px){
-    /*body{
-        background-color: red;
-    }*/
-    
+@media screen and  (min-width: 768px) and (max-width:992px){
+    .like-btn{
+        align-self: baseline;
+        font-size: 30px;
+    }
 }
