@@ -1,14 +1,14 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA ;
 $color-tertiary: #99E2D0 ;
-$color-like-gradient:linear-gradient(180deg, rgba(147,86,220,1) 50%, rgba(247,114,211,1) 100%);
+$color-like-gradient:-webkit-linear-gradient(270deg, rgba(147,86,220,1) 50%, rgba(247,114,211,1) 100%);
 $gray-light:#f6f6f6;
 $gray_mild: #eaeaea;
 $gray-strong:#353535;
 $text:black;
 $color-btn:linear-gradient(351deg, $color-primary 15%, $color-secondary 85%);
 $num1-bars:3;
-$num2-bars:3;
+$num2-bars:4;
 
 $anim1-dur:500ms;
 $anim2-dur:500ms;
@@ -19,13 +19,12 @@ $anim2-delay:calc($anim2-dur / $num2-bars);
 $font-size: (heading-main:24px, heading-big:23px, heading-small:21px, text:20px, text-small:16px);
 
 @mixin lighten-btn{
-
-
 background: linear-gradient(
   351deg,
   lighten($color-primary, 5%) 15%,
   lighten($color-secondary, 5%) 85%);
 }
+
 @mixin blocs-padding {
     padding: 12px 10px;
 }
@@ -34,7 +33,6 @@ background: linear-gradient(
     display: flex;
     flex-direction: column;
 }
-
 
 @font-face {
     font-family:'Roboto';
@@ -75,7 +73,7 @@ a {
 }
 
 .loader{
-    // animation de disparition du loader
+    /*animation de disparition du loader*/
     
     position: absolute;
     top: 0;
@@ -86,9 +84,8 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    
     background-color: white;
-    animation: loader-disparition 3s ease-out both;
+    animation: loader-disparition 2.5s ease-out both;
 
     @keyframes loader-disparition {
         0% {
@@ -107,13 +104,16 @@ a {
           }
     }
    
-    // faire une animation de rotation
+    /*animation de rotation pour le loader*/
    .fa-spinner{
     position: fixed;
     top: 50%;
     font-size: 100px;
-    color: $color-primary;
-    animation:spin 3s linear both ;
+    /*color: $color-primary;*/
+    background: $color-like-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    animation:spin 2.5s linear both ;
     animation-iteration-count: 1;
     
 
@@ -140,10 +140,6 @@ a {
     }
    }
 }
-
-    
-
-
 
 header {
     display: flex;
@@ -196,19 +192,14 @@ header {
 
         opacity:(0.8);
         box-shadow: 0px 1px 17px 1px $gray-strong;
-    
-    transition: all 400ms ease-in-out;
-    
-        
-        
-
+        transition: all 400ms ease-in-out;
     }
 }
+
 .concept {   
     @include f-column;
     padding: 12px 20px;
     gap: 15px;
-    
     &__step {
         background-color: $gray_light;
         border-radius: 15px;
@@ -227,7 +218,6 @@ header {
                 color:$color-primary;
                 transition: color 200ms ease-in-out;
             }
-    
         }
     
         span{
@@ -245,7 +235,6 @@ header {
     }
 }
 
-
 .index-main {
     background-color: $gray-light;
     gap: 20px;
@@ -258,7 +247,6 @@ header {
         gap: 15px;
     }
 }
-
 
 .card {
     position: relative;
@@ -289,30 +277,7 @@ header {
         font-weight: bold;
     }
 }
-
-
-
-
-
-        
-    
-
-    
-
-
-
    
-     
-
-
-   
-
-
-
-
-
-    
-    
 .footer {
     background-color: $gray-strong;
     color: white;
@@ -330,7 +295,6 @@ header {
             width: 22px;
         }
     }
-
 }
 
 .restaurant-heading{
@@ -350,12 +314,12 @@ header {
     &__head{
         display: flex;
         padding: 30px 10px 0px 15px;
-        font-size: 31px;
+        font-size: 27px;
         justify-content: space-between;
         h1{
         font-family: "Shrikhand";
         font-weight: 500;
-        font-size: 31px;
+        font-size: 27px;
         }
     }
     &__course {
@@ -392,38 +356,28 @@ header {
 
 .like-btn{
     position: relative;
-    
-    
+    font-size: 25px;
     .fa-heart{
         position: absolute;
         right: 10px;
-        
-        
-        
     }
     .fa-regular{
-        &:hover + i{       
+        &:hover + i {       
              transform: scale(1);
-             transition : transform 1s ease-in;
-             transform-origin: bottom;
-             
-                                   
+             transition : transform 0.6s ease-in;
+             transform-origin: bottom;                         
         }
+    }
        
-    }   
     .fa-solid{
-        color: $color-primary;
-        z-index: 1000;
+        background: $color-like-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        /*z-index: 1000;*/
         transform: scale(0);
         
     }
-   
 }
-
-    
-
-    
-
 
 
 .courses {
@@ -451,7 +405,6 @@ header {
     &__price-check{
         display: flex;
         justify-content: space-between;
-        
         width: 20%;
         transform: translateX(50%);
         transition: transform 350ms ease-out 50ms;
@@ -502,7 +455,6 @@ header {
     width: 50%;
     background-color: $color-tertiary;
 }
-
 
 @keyframes bars {
     0% {
