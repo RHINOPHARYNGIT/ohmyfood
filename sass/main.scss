@@ -109,8 +109,8 @@ a {
     position: fixed;
     top: 50%;
     font-size: 100px;
-    /*color: $color-primary;*/
     background: $color-like-gradient;
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     animation:spin 2.5s linear both ;
@@ -171,9 +171,13 @@ header {
         display: flex;
         justify-content: center;
         gap: 3%;
+
     }
     .container{
-    padding: 20px 0px;
+        padding: 20px 0px;
+        p{
+            color:$gray-strong;
+        }
     } 
 }
 
@@ -198,15 +202,21 @@ header {
 
 .concept {   
     @include f-column;
-    padding: 12px 20px;
+    padding: 20px;
     gap: 15px;
     &__step {
         background-color: $gray_light;
         border-radius: 15px;
-        @include blocs-padding;
+        padding: 20px 10px;
         display: flex;
+        align-items: baseline;
+        font-weight: bold;
         i{
             color: $gray-strong;
+            opacity: 0.7;
+            width: 1em;
+            text-align: center;
+            
         }
         gap: 10px;
         box-shadow:  0px 9px 20px -18px $gray-strong;
@@ -219,7 +229,6 @@ header {
                 transition: color 200ms ease-in-out;
             }
         }
-    
         span{
             text-align: center;
             border-radius: 50%;
@@ -231,6 +240,7 @@ header {
             position: relative;
             left: -20px;
             color: white;
+            font-weight: normal;
         }
     }
 }
@@ -281,7 +291,7 @@ header {
 .footer {
     background-color: $gray-strong;
     color: white;
-    @include blocs-padding;
+    padding: 20px 10px;
     @include f-column;
     font-size: map-get($font-size,text-small);
     gap: 5px;
@@ -360,6 +370,8 @@ header {
     .fa-heart{
         position: absolute;
         right: 10px;
+        top: 2px;
+        
     }
     .fa-regular{
         &:hover + i {       
@@ -371,9 +383,9 @@ header {
        
     .fa-solid{
         background: $color-like-gradient;
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        /*z-index: 1000;*/
         transform: scale(0);
         
     }

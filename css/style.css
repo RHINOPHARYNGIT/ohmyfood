@@ -65,8 +65,8 @@ a {
   position: fixed;
   top: 50%;
   font-size: 100px;
-  /*color: $color-primary;*/
   background: -webkit-linear-gradient(270deg, rgb(147, 86, 220) 50%, rgb(247, 114, 211) 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: spin 2.5s linear both;
@@ -124,6 +124,9 @@ header i {
 .nav .container {
   padding: 20px 0px;
 }
+.nav .container p {
+  color: #353535;
+}
 
 .btn {
   padding: 10px 15px;
@@ -145,19 +148,24 @@ header i {
 .concept {
   display: flex;
   flex-direction: column;
-  padding: 12px 20px;
+  padding: 20px;
   gap: 15px;
 }
 .concept__step {
   background-color: #f6f6f6;
   border-radius: 15px;
-  padding: 12px 10px;
+  padding: 20px 10px;
   display: flex;
+  align-items: baseline;
+  font-weight: bold;
   gap: 10px;
   box-shadow: 0px 9px 20px -18px #353535;
 }
 .concept__step i {
   color: #353535;
+  opacity: 0.7;
+  width: 1em;
+  text-align: center;
 }
 .concept__step:hover {
   background-color: #e4d5f6;
@@ -179,6 +187,7 @@ header i {
   position: relative;
   left: -20px;
   color: white;
+  font-weight: normal;
 }
 
 .index-main {
@@ -229,7 +238,7 @@ header i {
 .footer {
   background-color: #353535;
   color: white;
-  padding: 12px 10px;
+  padding: 20px 10px;
   display: flex;
   flex-direction: column;
   font-size: 16px;
@@ -312,6 +321,7 @@ header i {
 .like-btn .fa-heart {
   position: absolute;
   right: 10px;
+  top: 2px;
 }
 .like-btn .fa-regular:hover + i {
   transform: scale(1);
@@ -320,9 +330,9 @@ header i {
 }
 .like-btn .fa-solid {
   background: -webkit-linear-gradient(270deg, rgb(147, 86, 220) 50%, rgb(247, 114, 211) 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /*z-index: 1000;*/
   transform: scale(0);
 }
 
@@ -420,6 +430,9 @@ header i {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
+  .concept__step {
+    font-size: 20px;
+  }
   .like-btn {
     align-self: baseline;
     font-size: 30px;
@@ -436,10 +449,6 @@ header i {
   }
 }
 @media screen and (min-width: 992px) {
-  html, body {
-    width: 100%;
-    height: 100%;
-  }
   body {
     display: flex;
     flex-direction: column;
@@ -457,14 +466,17 @@ header i {
   .concept, .index-main {
     width: 60%;
   }
+  .index-main {
+    gap: 30px;
+  }
   .like-btn {
-    /*align-self: center;*/
     font-size: 30px;
   }
   .footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
   }
   .footer__heading {
     padding-left: 20px;
@@ -497,5 +509,11 @@ header i {
   }
   .menu__order {
     margin-bottom: unset;
+  }
+  .menu__order .btn {
+    padding: 15px 22px;
+    border-radius: 36px;
+    margin: 10px;
+    font-size: 24px;
   }
 }
