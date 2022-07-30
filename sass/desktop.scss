@@ -9,8 +9,14 @@
         width: 100%;
     }
 
-    header i{
+    header {
+        padding: unset;
+        i{
         font-size: 50px;
+        }
+        img{
+            padding: 12px 0px;
+        }
     }
 
     .nav{
@@ -24,7 +30,7 @@
     }
     
     .index-main{
-    gap: 30px;
+        gap: 30px;
     }
 
     .like-btn{
@@ -36,11 +42,15 @@
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
+        padding: unset;
         &__heading{
-            padding-left: 20px;
+            padding:20px 0px 20px 20px;
+        }
+        &__link{
+            padding: 20px 0px;
         }
         a:last-of-type{
-            padding-right: 10px;
+            padding-right: 20px;
         }
     }
 
@@ -79,6 +89,4 @@
             }
         }
     }
-
-    
 }

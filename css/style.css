@@ -457,8 +457,14 @@ header i {
   header, nav, footer {
     width: 100%;
   }
+  header {
+    padding: unset;
+  }
   header i {
     font-size: 50px;
+  }
+  header img {
+    padding: 12px 0px;
   }
   .nav__location {
     gap: 1%;
@@ -477,12 +483,16 @@ header i {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    padding: unset;
   }
   .footer__heading {
-    padding-left: 20px;
+    padding: 20px 0px 20px 20px;
+  }
+  .footer__link {
+    padding: 20px 0px;
   }
   .footer a:last-of-type {
-    padding-right: 10px;
+    padding-right: 20px;
   }
   /*début du style propre aux pages de restaurant, pas de style relatif à l'index.html après ce repère*/
   .restaurant-heading {
